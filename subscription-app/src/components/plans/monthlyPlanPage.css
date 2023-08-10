@@ -1,0 +1,112 @@
+/* MonthlyPlanPage.css */
+
+.monthly-plan-page {
+  text-align: center;
+  padding: 20px;
+}
+
+.switch-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.switch-label {
+  margin: 0 10px;
+  font-size: 18px;
+  color: #555;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 30px;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #7894bc;
+  transition: 0.4s;
+  border-radius: 30px;
+}
+
+.slider:before {
+  position: absolute;
+  content: '';
+  height: 24px;
+  width: 24px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #1e4d91;
+}
+
+input:checked + .slider:before {
+  transform: translateX(30px);
+}
+
+.plans-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th,
+td {
+  padding: 10px;
+  text-align: center;
+}
+
+th {
+  background-color: #7894bc;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+td {
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  width: 25%;
+  padding: 15px;
+}
+
+td:first-child {
+  font-weight: bold;
+  background-color: #f0f0f0;
+}
+
+td.selected {
+  background-color: #1e4d91;
+  color: white;
+  font-weight: bold;
+}
+
+.next-button {
+  background-color: #1e4d91;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .plans-table td {
+    width: 50%;
+  }
+}
