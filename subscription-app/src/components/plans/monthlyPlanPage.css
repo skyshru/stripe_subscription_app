@@ -8,19 +8,30 @@
 .switch-container {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   margin: 20px 0;
 }
 
+.switch-labels {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
 .switch-label {
-  margin: 0 10px;
+  margin: 5px;
   font-size: 18px;
   color: #555;
+  cursor: pointer;
+}
+
+.switch-label.active {
+  color: #7894bc;
 }
 
 .switch {
   position: relative;
-  display: inline-block;
   width: 60px;
   height: 30px;
 }
@@ -57,6 +68,52 @@ input:checked + .slider:before {
   transform: translateX(30px);
 }
 
+/* MonthlyPlanPage.css */
+
+/* ... (previous styles) */
+
+.plan-options {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.plan-box {
+  width: 100px; /* Adjust the width as needed */
+  height: 100px; /* Set the height to match the width */
+  padding: 10px;
+  text-align: center;
+  font-weight: bold;
+  border: 2px solid #7894bc;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Add specific alignments for each button */
+.mobile {
+  position: relative;
+ left: 40px;
+}
+
+
+/* ... (rest of the styles) */
+
+
+.plan-box:hover {
+  background-color: #7894bc;
+  color: white;
+}
+
+.plan-box.selected {
+  background-color: #1e4d91;
+  color: white;
+}
+
 .plans-table {
   width: 100%;
   border-collapse: collapse;
@@ -69,28 +126,15 @@ td {
   text-align: center;
 }
 
-th {
-  background-color: #7894bc;
-  color: white;
-  cursor: pointer;
-  font-weight: bold;
-}
-
 td {
   border-top: 1px solid #ccc;
   border-bottom: 1px solid #ccc;
   width: 25%;
-  padding: 15px;
-}
-
-td:first-child {
-  font-weight: bold;
-  background-color: #f0f0f0;
 }
 
 td.selected {
-  background-color: #1e4d91;
-  color: white;
+  
+  color: #205090;
   font-weight: bold;
 }
 
@@ -102,11 +146,4 @@ td.selected {
   border-radius: 5px;
   cursor: pointer;
   margin-top: 20px;
-}
-
-/* Responsive design for smaller screens */
-@media (max-width: 768px) {
-  .plans-table td {
-    width: 50%;
-  }
 }
