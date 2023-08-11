@@ -20,6 +20,7 @@ function App() {
           <Route path="/current-plan-cancel" component={CurrentPlanCancel} />
           {/* Add other routes here */}
         </Routes>
+        <Register/>
       </div>
     </Router>
   );
