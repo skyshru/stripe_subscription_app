@@ -6,10 +6,10 @@ const MonthlyPlanPage = () => {
   const [isYearly, setIsYearly] = useState(false);
 
   const plans = [
-    { id: 'mobile', title: 'MOBILE', price: '1000', videoQuality: 'Good', resolution: '480p', devices: ['Phone'] },
-    { id: 'basic', title: 'BASIC', price: '2000', videoQuality: 'Good', resolution: '480p', devices: ['Phone', 'Tablet'] },
-    { id: 'standard', title: 'STANDARD', price: '5000', videoQuality: 'Better', resolution: '1080p', devices: ['Phone', 'Tablet', 'Computer'] },
-    { id: 'premium', title: 'PREMIUM', price: '7000', videoQuality: 'Best', resolution: '4K+ HDR', devices: ['Phone', 'Tablet', 'Computer', 'TV'] },
+    { id: 'mobile', title: 'MOBILE', price: '100', videoQuality: 'Good', resolution: '480p', devices: ['Phone'] },
+    { id: 'basic', title: 'BASIC', price: '200', videoQuality: 'Good', resolution: '480p', devices: ['Phone', 'Tablet'] },
+    { id: 'standard', title: 'STANDARD', price: '500', videoQuality: 'Better', resolution: '1080p', devices: ['Phone', 'Tablet', 'Computer'] },
+    { id: 'premium', title: 'PREMIUM', price: '700', videoQuality: 'Best', resolution: '4K+ HDR', devices: ['Phone', 'Tablet', 'Computer', 'TV'] },
   ];
 
   const handlePlanSelect = (planId) => {
@@ -73,7 +73,7 @@ const MonthlyPlanPage = () => {
       className={`${selectedPlan === plan.id ? 'selected' : ''} ${plan.id}-column`}
     >
       <span className="price">
-        ₹{isYearly ? parseInt(plan.price) * 12 : plan.price}
+        ₹{isYearly ? parseInt(plan.price) * 10 : plan.price}
       </span>
     </td>
   ))}
