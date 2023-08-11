@@ -1,5 +1,8 @@
 import React from 'react';
 
+
+import { Link } from 'react-router-dom'; // Import Link from React Router
+
 const Register = () => {
   return (
     <div style={styles.container}>
@@ -21,12 +24,19 @@ const Register = () => {
           <input type="checkbox" />
           <span style={styles.rememberLabel}>Remember me</span>
         </div>
-        <button style={styles.signupButton}>Sign Up</button>
-        <p style={styles.loginLink}>Already have an account? <a href="#">Login</a></p>
+        <Link to="/login"> {/* Use Link to navigate to the Login component */}
+          <button style={styles.signupButton}>Sign Up</button>
+        </Link>
+        <p style={styles.loginLink}>Already have an account? <Link to="/login">Login</Link></p>
       </div>
     </div>
   );
 };
+
+// Styles remain unchanged
+
+
+
 
 const styles = {
   container: {
