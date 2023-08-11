@@ -1,6 +1,4 @@
 import React from 'react';
-
-
 import { Link } from 'react-router-dom'; // Import Link from React Router
 
 const Register = () => {
@@ -32,11 +30,6 @@ const Register = () => {
     </div>
   );
 };
-
-// Styles remain unchanged
-
-
-
 
 const styles = {
   container: {

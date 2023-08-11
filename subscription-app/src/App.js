@@ -12,8 +12,8 @@ function App() {
     <Router>
       <div className="App">
         <Routes>
-          <Route path="/register" component={Register} />
-          <Route path="/login" component={Login} />
+        <Route path="/register" element={<Register />} />
+          <Route path="/login" element={<Login />} />
           <Route path="/monthly-plan" component={MonthlyPlanPage} />
           <Route path="/complete-payment" component={CompletePayment} />
           <Route path="/current-plan-active" component={CurrentPlanActive} />
